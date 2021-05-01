@@ -1,4 +1,3 @@
-
 def SwapRows(A, B, row1, row2):
     A[row1], A[row2] = A[row2], A[row1]
     B[row1], B[row2] = B[row2], B[row1]
