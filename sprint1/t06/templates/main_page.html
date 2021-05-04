@@ -35,7 +35,7 @@
             <option value="1">Method: Cramer</option>
             <option value="2">Method: Gauss</option>
             <option value="3">Method: Zeidel</option>
-            <option value="4">Method: Jordan-Gauss</option>
+            <option value="4">Method: Gauss-Jordan</option>
             <option value="5">Method: Jacobi</option>
         </select>
         <form action="" method="post">
@@ -62,4 +62,11 @@
             </div>
         <input type="submit" value="Upload">
 	</form>
+    {% if A %}
+        <p>{{ A }}</p>
+        <p> {{ B }}</p>
+
+        <p>RESULT: {{ result }}</p>
+    {% endif %}
+    
 </body>
