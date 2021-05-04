@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sprint1</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+      <style>
+        .main_div {
+            display: inline-flex;
+            flex-flow: row;
+            width: 99vw;
+            border: 2px solid green;
+        }
+       .keyboard {
+           width: 50%;
+           height: 200px;
+           border: 2px solid black;
+           padding-left: 12px;
+       }
+       .file {
+           width: 50%;
+           height: 200px;
+           border: 2px solid blue;
+           padding-left: 12px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Sprint1</h1>
+    <form method="post" action="">
+        <select class="form-control" name="methods" style="margin-top: 30px;">
+            <option value="1">Method: Cramer</option>
+            <option value="2">Method: Gauss</option>
+            <option value="3">Method: Zeidel</option>
+            <option value="4">Method: Jordan-Gauss</option>
+            <option value="5">Method: Jacobi</option>
+        </select>
+        <form action="" method="post">
+            <div class="main_div">
+                
+                <div class="keyboard">
+                    <h3>keyboard</h3>
+                    
+                        <p>
+                            <label for="A">A:</label>
+                            <input type="text" name="A" placeholder="coefficient matrix... " width="400px">
+                        </p>
+                        <p>
+                            <label for="B">B:</label>
+                            <input type="text" name="B" placeholder="vector free members..." width="400px">
+                        </p>
+                </div>
+                <div class="file">
+                    <h3>file</h3>
+                    <p style="margin-top: 30px;">
+                        <input type="file" name="file">
+                    </p>
+                </div>
+            </div>
+        <input type="submit" value="Upload">
+	</form>
+</body>
