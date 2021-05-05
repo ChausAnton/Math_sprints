@@ -121,7 +121,7 @@ def check_matrix(myA, myB, result):
         count = 0
         for i in range(len(myA[line])):
             count += (myA[line][i] * result[i])
-        if count != myB[line]:
+        if round(count) != round(myB[line]):
             return False
     return True
         

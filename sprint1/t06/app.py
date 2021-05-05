@@ -64,6 +64,7 @@ def get_from_file(file_name):
 
 @app.route('/', methods=['post', 'get'])
 def start_page():
+	roots = "Roots are suitable for solving"
 	a_list = list()
 	b_list = list()
 	A = []
@@ -92,18 +93,17 @@ def start_page():
 				a_copy = A.copy()
 				b_copy = B.copy()
 				result = work_with_methods(a_copy, b_copy, method)
-	if result:
-		if not check_matrix(A, B, result):
+
+		if A and B:
+			if not check_matrix(A, B, result):
+				result = "Error"
+				roots = "Roots are not suitable for solving"
+				A = " "
+				B = " "
+		else:
 			result = "Error"
+			roots = " "
 			A = " "
 			B = " "
-	else:
-		result = "Error"
-		A = " "
-		A
-		B = " "
 
-	return render_template('main_page.html', A=A, B=B, result=result)
-
-
-
+	return render_template('index.html', A=A, B=B, result=result, roots=roots)
