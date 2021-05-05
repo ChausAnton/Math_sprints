@@ -92,6 +92,17 @@ def start_page():
 				a_copy = A.copy()
 				b_copy = B.copy()
 				result = work_with_methods(a_copy, b_copy, method)
+	if result:
+		if not check_matrix(A, B, result):
+			result = "Error"
+			A = " "
+			B = " "
+	else:
+		result = "Error"
+		A = " "
+		A
+		B = " "
+
 	return render_template('main_page.html', A=A, B=B, result=result)
 
 
