@@ -77,7 +77,9 @@ def start_page():
 			file_name = request.form.get('file')
 			try:
 				A, B = get_from_file(file_name)
-				result = work_with_methods(A, B, method)
+				a_copy = A.copy()
+				b_copy = B.copy()
+				result = work_with_methods(a_copy, b_copy, method)
 			except:
 				pass
 		else:
@@ -87,8 +89,10 @@ def start_page():
 			if B:
 				A = TakeA(a_list, B)
 			if A:
-				result = work_with_methods(A, B, method)
-	return render_template('main_page.html', A=A, result=result)
+				a_copy = A.copy()
+				b_copy = B.copy()
+				result = work_with_methods(a_copy, b_copy, method)
+	return render_template('main_page.html', A=A, B=B, result=result)
 
 
 
