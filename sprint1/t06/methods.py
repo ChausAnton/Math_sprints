@@ -115,4 +115,13 @@ def Cramer(A, B):
         result = np.append(result, np.linalg.det(a_work)/D)
         a_work = np.copy(A)
     return result
+
+def check_matrix(myA, myB, result):
+    for line in range(len(myA)):
+        count = 0
+        for i in range(len(myA[line])):
+            count += (myA[line][i] * result[i])
+        if count != myB[line]:
+            return False
+    return True
         
