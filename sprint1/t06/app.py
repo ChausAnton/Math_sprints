@@ -118,3 +118,6 @@ def start_page():
 			B = " "
 
 	return render_template('index.html', A=A, B=B, result=result, roots=roots)
+
+if __name__ == "__main__":
+	app.run(host='127.0.0.1', port=5000)
