@@ -1,10 +1,9 @@
-
 import numpy
 from flask import Flask, render_template, request
 import copy
 from methods import *
 
-UPLOAD_FOLDER = '/uploads/files/'
+UPLOAD_FOLDER = 'uploads/files/'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
@@ -61,6 +60,16 @@ def get_from_file(file_name):
 			myA.append(temp)
 			myB.append(float(line[index]))
 		return myA, myB
+		
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+def save_file(file):
+	if file and allowed_file(file.filename):
+		file.save(UPLOAD_FOLDER + file.filename)
+
 
 @app.route('/', methods=['post', 'get'])
 def start_page():
@@ -75,8 +84,10 @@ def start_page():
 		myA = request.form.get('A')
 		myB = request.form.get('B')
 		if(not myA or not myB):
-			file_name = request.form.get('file')
 			try:
+				file = request.files['file']
+				save_file(file)
+				file_name = UPLOAD_FOLDER + file.filename
 				A, B = get_from_file(file_name)
 				a_copy = A.copy()
 				b_copy = B.copy()
