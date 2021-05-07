@@ -6,8 +6,7 @@ def func(x, y):
 def euler(f, a, b, Yo, N):
     res = []
     h = (b - a) / N
-    y = Yo
-    x = a
+    x, y = a, Yo
     for i in range(1, N + 1):
         y = y + (h * f(x, y))
         x = a + (i * h)
