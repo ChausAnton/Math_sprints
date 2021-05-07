@@ -19,4 +19,4 @@ def runge_kutta_4(f, a, b, Yo, N):
     
 
 if __name__ == "__main__":
-    print(runge_kutta_2(func, 0, 1, 1, 10))
+    print(runge_kutta_4(func, 0, 1, 1, 10))
