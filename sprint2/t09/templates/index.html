@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sprint2</title>
+    <link rel="icon" href="data:;base64,=">
+      <style>
+        .main_div {
+            display: inline-flex;
+            flex-flow: row;
+            width: 99vw;
+            border: 2px solid green;
+        }
+       .integral {
+           width: 50%;
+           height: 270px;
+           border: 2px solid black;
+           padding-left: 12px;
+       }
+       .differential {
+           width: 50%;
+           height: 270px;
+           border: 2px solid blue;
+           padding-left: 12px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Sprint2</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+            <div class="main_div">
+                
+                <div class="integral">
+                    <h3>integral</h3>
+
+                        <select class="form-control" name="methods1" style="margin-top: 30px;">
+                            <option value="1">Method: left rectangles</option>
+                            <option value="2">Method: right rectangles</option>
+                            <option value="3">Method: central rectangles</option>
+                            <option value="4">Method: trapezium</option>
+                            <option value="5">Method: parabola</option>
+                        </select>
+
+                        <select class="form-control" name="formula1" style="margin-top: 30px;">
+                            <option value="1">formula: exp(-x)</option>
+                            <option value="2">formula: sin(x)</option>
+                            <option value="3">formula: exp(-x^2)</option>
+                            <option value="4">formula: exp(-4x-x^3)</option>
+                        </select>
+                    
+                        <p>
+                            <label for="A">A:</label>
+                            <input type="number" name="A1">
+                        </p>
+                        <p>
+                            <label for="B">B:</label>
+                            <input type="number" name="B1">
+                        </p>
+                        <p>
+                            <label for="B">N:</label>
+                            <input type="number" name="N1">
+                        </p>
+                </div>
+                <div class="differential">
+                    <h3>differential</h3>
+
+                        <select class="form-control" name="methods2" style="margin-top: 30px;">
+                            <option value="6">Method: euler</option>
+                            <option value="7">Method: runge kutta2</option>
+                            <option value="8">Method: runge kutta3</option>
+                            <option value="9">Method: runge kutta4</option>
+                        </select>
+
+                        <select class="form-control" name="formula2" style="margin-top: 30px;">
+                            <option value="5">formula: -xy</option>
+                            <option value="6">formula: y + x</option>
+                            <option value="7">formula: (3x-12x^2)y</option>
+                        </select>
+                    
+                        <p>
+                            <label for="A">A:</label>
+                            <input type="number" name="A2">
+                        </p>
+                        <p>
+                            <label for="B">B:</label>
+                            <input type="number" name="B2">
+                        </p>
+                        <p>
+                            <label for="B">Y:</label>
+                            <input type="number" name="Y0">
+                        </p>
+                        <p>
+                            <label for="B">N:</label>
+                            <input type="number" name="N2">
+                        </p>
+                </div>
+            </div>
+        <input type="submit" value="Upload">
+	</form>
+        <p>{{ A }}</p>
+        <p> {{ B }}</p>
+        <p> {{ N }}</p>
+        <p>RESULT: {{ result }}</p>
+    
+</body>
