@@ -36,18 +36,30 @@ def work_with_methods2(method, formula, a, b, Yo, N):
 
 
 def work_with_methods(method, formula, a, b, N):
+	res55 = dict()
 	F = work_with_formula(formula)
 	result = None
-	if(method == '1'):
+	if(method == '1' or method == '55'):
 		result = left_rectangles(F, a, b, N)
-	elif(method == '2'):
+		if(method == '55'):
+			res55['left rectangles'] = result
+	if(method == '2' or method == '55'):
 		result = right_rectangles(F, a, b, N)
-	elif(method == '3'):
+		if(method == '55'):
+			res55['right rectangles'] = result
+	if(method == '3' or method == '55'):
 		result = central_rectangles(F, a, b, N)
-	elif(method == '4'):
+		if(method == '55'):
+			res55['central rectangles'] = result
+	if(method == '4' or method == '55'):
 		result = trapezium(F, a, b, N)
-	elif(method == '5'):
+		if(method == '55'):
+			res55['trapezium'] = result
+	if(method == '5' or method == '55'):
 		result = parabola(F, a, b, N)
+		if(method == '55'):
+			res55['parabola'] = result
+			return res55
 	return result
 
 

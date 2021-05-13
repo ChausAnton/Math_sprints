@@ -41,6 +41,7 @@
                             <option value="3">Method: central rectangles</option>
                             <option value="4">Method: trapezium</option>
                             <option value="5">Method: parabola</option>
+                            <option value="55">Method: all methods</option>
                         </select>
 
                         <select class="form-control" name="formula1" style="margin-top: 30px;">
@@ -100,9 +101,9 @@
         <input type="submit" value="Upload">
 	</form>
     {% if result %}
-        <p>{{ A }}</p>
-        <p> {{ B }}</p>
-        <p> {{ N }}</p>
+        <p>A: {{ A }}</p>
+        <p>B: {{ B }}</p>
+        <p>N: {{ N }}</p>
         <p>RESULT: {{ result }}</p>
 
         <canvas id="chart" width="600" height="400"></canvas>
