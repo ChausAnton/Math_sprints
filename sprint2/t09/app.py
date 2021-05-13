@@ -58,6 +58,8 @@ def start_page():
 	a = None
 	b = None
 	N = None
+	step = 0
+	Max = 0
 	if request.method == 'POST':
 		try:
 			method = request.form.get('methods1')
@@ -74,7 +76,9 @@ def start_page():
 			N = int(request.form.get('N2'))
 			Yo = float(request.form.get('Y0'))
 			result = work_with_methods2(method, formula, a, b, Yo, N)
-	return render_template('index.html', A=a, B=b, N=N, result=result)
+			step = (b - a) / N
+			Max = max(result)
+	return render_template('index.html', A=a, B=b, N=N, result=result, step=step, Max=Max)
 
 
 if __name__ == "__main__":
