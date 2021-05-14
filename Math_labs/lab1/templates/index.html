@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lab1</title>
+    <link rel="icon" href="data:;base64,=">
+      <style>
+        .main_div {
+            display: inline-flex;
+            flex-flow: row;
+            width: 99vw;
+            
+        }
+       .main_box {
+           width: 50%;
+           height: 270px;
+           padding-left: 12px;
+           border: 2px solid green;
+       }
+    </style>
+</head>
+<body>
+    <h1>lab1</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+            <div class="main_div">
+                
+                <div class="main_box">
+                    <h3>multitudes</h3>
+
+                        <select class="form-control" name="methods" style="margin-top: 30px;">
+                            <option value="1">Entry: A - B</option>
+                            <option value="2">Entry: B - A</option>
+                            <option value="3">Difference: A - B</option>
+                            <option value="4">Difference: B - A</option>
+                            <option value="5">Union</option>
+                            <option value="6">Intersection</option>
+                            <option value="7">Symmetric difference</option>
+                        </select>
+                        <p>
+                            <label for="A">A:</label>
+                            <input type="text" name="A">
+                        </p>
+                        <p>
+                            <label for="B">B:</label>
+                            <input type="text" name="B">
+                        </p>
+                    
+                </div>
+            </div>
+        <input type="submit" value="Upload">
+	</form>
+    {% if result %}
+        <p>A: {{ A }}</p>
+        <p>B: {{ B }}</p>
+        <p>RESULT: {{ result }}</p>
+    {% endif %}
+</body>
