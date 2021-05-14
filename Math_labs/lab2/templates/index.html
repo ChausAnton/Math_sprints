@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lab2</title>
+    <link rel="icon" href="data:;base64,=">
+      <style>
+        .main_div {
+            display: inline-flex;
+            flex-flow: row;
+            width: 99vw;
+            
+        }
+       .main_box {
+           width: 50%;
+           height: 300px;
+           padding-left: 12px;
+           border: 2px solid green;
+       }
+       .dyra {
+           display: flex;
+           flex-flow: row;
+       }
+       .dyra1 {
+           margin-right: 10px;
+       }
+       .dyra2 {
+           margin-left: 10px;
+       }
+    </style>
+</head>
+<body>
+    <h1>lab2</h1>
+    
+            <div class="main_div">
+                <div class="main_box">
+                    <h3>graphs</h3>
+                    <p></p>
+                    {% if adjacencies %}
+                        <div class="dyra">
+                            <div class="dyra1">
+                                adjacencies:<br> 
+                                {% for item in adjacencies %}
+                                    {{ item }},<br>
+                                {% endfor %}
+                            </div>
+                            <div class="dyra2">
+                                incident:<br>
+                                {% for item1 in incident %}
+                                    {{ item1 }},<br>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <p>degrees_vertices: {{ degrees_vertices }}</p>
+                        <p>form: {{ form }}</p>
+                        <p>display: {{ display }}</p>
+                    {% endif %}
+                </div>
+                <div>
+                    <img src= "{{ url_for('static',filename='img/g.jpg') }}">
+                </div>
+            </div>
+	
+    
+</body>
