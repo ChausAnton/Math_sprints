@@ -1,4 +1,5 @@
 import task1 from "./task1.js";
+import task2 from "./task2.js";
 import getSamples from "./getSamples.js";
 
 document.querySelector("#amount").addEventListener('change', () => {
@@ -37,5 +38,9 @@ document.querySelector("#Calculate").addEventListener('click', () => {
         div.appendChild(container)
     }
     let samples = getSamples()
-    document.querySelector('.main_div .task1').innerHTML = task1(samples).innerHTML
+    let res1 = task1(samples)
+    document.querySelector('.main_div .task1').innerHTML = res1['html'].innerHTML
+
+    task2(res1['VariesNear'])
+        //document.querySelector('.main_div .task2').innerHTML = task2(samples).innerHTML
 })

@@ -1,5 +1,6 @@
 export default (samples) => {
     const container = document.createElement('div')
+    let Varies = []
 
     for (let i = 0; i < samples.length; i++) {
         samples[i] = samples[i].sort((a, b) => a - b)
@@ -22,7 +23,7 @@ export default (samples) => {
         span.innerHTML = samples[i]
 
         const RangeDiv = document.createElement('div')
-        sampleDiv.classList.add('RangeDiv')
+        RangeDiv.classList.add('RangeDiv')
 
         const RangeSpan = document.createElement('span')
         RangeSpan.classList.add('RangeSpan')
@@ -35,7 +36,7 @@ export default (samples) => {
         let accumulated_frequence = []
         let relative_frequence = []
         let cumalative_relative_frequence = []
-
+        let VariesNear = []
         for (let j of new Set(samples[i])) {
             clear_sample.push(j)
         }
@@ -69,13 +70,14 @@ export default (samples) => {
         const TableDiv = document.createElement('div')
         TableDiv.classList.add('TableDiv')
 
-        let VariesNear = []
+
         VariesNear.push(clear_sample)
         VariesNear.push(frequence)
         VariesNear.push(accumulated_frequence)
         VariesNear.push(relative_frequence)
         VariesNear.push(cumalative_relative_frequence)
         TableDiv.innerHTML = print_varies_near(VariesNear)
+        Varies.push(VariesNear)
 
         RangeDiv.appendChild(RangeSpan)
         sampleDiv.appendChild(span)
@@ -85,7 +87,10 @@ export default (samples) => {
         div.appendChild(TableDiv)
         container.appendChild(div)
     }
-    return container
+    let dict = {};
+    dict['html'] = container
+    dict['VariesNear'] = Varies
+    return dict
 }
 
 function print_varies_near(VariesNear) {
