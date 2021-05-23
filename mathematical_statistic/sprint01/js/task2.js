@@ -1,8 +1,5 @@
 export default (varies_near) => {
     destroy_charts();
-    console.log(varies_near[0][0])
-   
-
     for(let i = 0; i < varies_near.length; i++) {
         let first_class = ".chart_" + String.fromCharCode(i + 97)
         print_chart(varies_near[i][0],varies_near[i][1], "chart" + i,"Polygon of transmission frequencies", "result_chart", first_class + " .Polygon", "id",1);
@@ -93,7 +90,6 @@ let charts = [];
 
 function destroy_charts() {
     let size = charts.length;
-    console.log(charts);
     for (let i = 0; i < size; i++) {
         charts[i].destroy();
     }

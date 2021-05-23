@@ -95,3 +95,16 @@ td {
 .Chart {
     padding: 15px;
 }
+
+.Task3 {
+    min-height: 50px;
+    min-width: 50px;
+    margin: 5px;
+    border: 2px black;
+    background: white;
+}
+
+.task3_data {
+    font-size: 20px;
+    margin: 5px;
+}

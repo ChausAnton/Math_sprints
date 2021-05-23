@@ -1,5 +1,6 @@
 import task1 from "./task1.js";
 import task2 from "./task2.js";
+import task3 from "./task3.js";
 import getSamples from "./getSamples.js";
 
 document.querySelector("#amount").addEventListener('change', () => {
@@ -43,6 +44,9 @@ document.querySelector("#Calculate").addEventListener('click', () => {
     
     document.querySelector('.main_div .task2').innerHTML = containers_for_task2(samples).innerHTML
     task2(res1['VariesNear'])
+
+    document.querySelector('.main_div .task3').innerHTML = task3(res1['VariesNear'], samples).innerHTML
+    
 })
 
 
