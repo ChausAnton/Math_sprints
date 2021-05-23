@@ -79,3 +79,19 @@ td {
 .text_sample_name {
     font-size: 26px;
 }
+
+.chart_task2 {
+    border: 2px solid black;
+}
+
+.chart {
+    min-height: 50px;
+    min-width: 50px;
+    margin: 5px;
+    border: 2px black;
+    background: white;
+}
+
+.Chart {
+    padding: 15px;
+}
