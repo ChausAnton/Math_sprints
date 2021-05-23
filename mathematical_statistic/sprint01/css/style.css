@@ -1,0 +1,52 @@
+.main_div {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.samples_container {
+    width: 100%;
+    min-height: 200px;
+    border: 2px solid black;
+}
+
+.bloks {
+    margin-top: 10px;
+}
+
+.how_much_samples {
+    padding: 15px;
+}
+
+.sample {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.sample_field {
+    width: 75%;
+}
+
+.calculate {
+    margin: 10px;
+}
+
+.Task {
+    width: 100%;
+    min-height: 200px;
+    border: 2px solid black;
+}
+
+.sort {
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.text {
+    margin: 10px;
+}
+
+.sample_task1 {
+    margin: 5px;
+    border: 2px solid red;
+}
