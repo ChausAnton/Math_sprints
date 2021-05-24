@@ -44,8 +44,8 @@ function print_chart(x_arr,y_arr,id,  label,class_name, parent, mode, chart_mode
             data: y_arr,
             lineTension: 0,
             fill: false,
-            borderColor: 'black',
-            backgroundColor: "white"
+            borderColor: 'green',
+            backgroundColor: "red"
         },
     ]
         };
@@ -69,7 +69,7 @@ function print_chart(x_arr,y_arr,id,  label,class_name, parent, mode, chart_mode
             label: label,
             data: x_arr,
             backgroundColor: [
-                'rgba(0, 99, 132, 0.6)'
+                'rgba(0, 100, 0, 0.8)'
             ]
           };
            
