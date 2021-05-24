@@ -96,7 +96,7 @@ td {
     padding: 15px;
 }
 
-.Task3 {
+.Task3, .Task4, .Task5  {
     min-height: 50px;
     min-width: 50px;
     margin: 5px;
@@ -104,7 +104,8 @@ td {
     background: white;
 }
 
-.task3_data {
+.task3_data, .task4_data, .task5_data  {
     font-size: 20px;
     margin: 5px;
 }
+

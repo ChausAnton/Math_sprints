@@ -171,7 +171,7 @@ export default (varies_near, samples) => {
     return container
 }
 
-function Mean(varies_near, samples, i) {
+export function Mean(varies_near, samples, i) {
     let sum = 0.0
     for(let j = 0; j < varies_near[i][0].length; j++) {
         sum += varies_near[i][0][j] * varies_near[i][1][j]
@@ -210,7 +210,7 @@ function Mode(varies_near, i) {
     return res
 }
 
-function Variance(varies_near, samples, i) {
+export function Variance(varies_near, samples, i) {
     let mean = Mean(varies_near, samples, i)
 
     let res = 0.0
@@ -244,7 +244,7 @@ function Asymmetry(varies_near, samples, i, pow) {
     return central_moment / sample_standard_deviation;
 }
 
-function CorrectedVariance(varies_near, samples, i) {
+export function CorrectedVariance(varies_near, samples, i) {
     return ((samples[i].length - 1) / samples[i].length) * Variance(varies_near, samples, i);
 }
 
