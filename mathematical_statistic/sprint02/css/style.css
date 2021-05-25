@@ -28,16 +28,16 @@
     width: 75px;
 }
 
-.span1_1, .span1_2, .span1_4, .span1_3 {
+.span1_1, .span1_2, .span1_4, .span1_3, .span2_1 {
     font-size: 26px;
     margin: 15px;
 }
 
-.table1_1, .MainTable, .table1_2 {
+.table1_1, .MainTable, .table1_2, .MainTable2 {
     margin: 15px;
 }
 
-.task1_3 {
+.task1_3, .task2_1 {
     margin-top: 30px;
 }
 

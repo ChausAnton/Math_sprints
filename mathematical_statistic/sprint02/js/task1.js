@@ -54,7 +54,6 @@ export default (arr) => {
 
     createHtml('task1_2_1', 'span1_3', 'H0: ' + pirson['HO'], 'task1_2', NaN, '')
 
-    console.log(pirson)
 
     table = TableInStr(['Xi', 'Xi+1', 'ni', 'x1', 'x2', 'F(x1)', 'F(x2)', 'pi', 'ni', 'Ki'], ChartArray, 'Iteration_table')
 
@@ -127,7 +126,7 @@ function HOPirson(varies) {
     }
 }
 
-function get_IntervalStatisticalSeries(arr) {
+export function get_IntervalStatisticalSeries(arr) {
     let sum = 0
     let hit = []
     for(let i = 0; i < arr.length; i++) {
@@ -140,7 +139,7 @@ function get_IntervalStatisticalSeries(arr) {
     return hit
 }
 
-function interval_to_str(array) {
+export function interval_to_str(array) {
     let result = [];
     for (let index = 0; index < array.length; index++) {
         let temp = "[";
@@ -154,7 +153,7 @@ function interval_to_str(array) {
     return result;
 }
 
-function print_chart(x_arr, y_arr, id, label, class_name, parent, mode) {
+export function print_chart(x_arr, y_arr, id, label, class_name, parent, mode) {
     let chart_div = document.createElement("div");
     chart_div.innerHTML = '<canvas id="' + id +'" class = "'+ class_name +'"></canvas>';
     
@@ -188,7 +187,7 @@ function print_chart(x_arr, y_arr, id, label, class_name, parent, mode) {
 }
 
 
-function get_varies_near_from_arr(array) {
+export function get_varies_near_from_arr(array) {
     let VariesNear = new Map();
 
     let first = [];
@@ -213,7 +212,7 @@ function get_varies_near_from_arr(array) {
     return VariesNear;
 }
 
-function mean(set1,set2,size) {
+export function mean(set1,set2,size) {
     let sum = 0.0;
     for (let i = 0; i < set1.length; i++) {
        sum += set1[i]*set2[i];
@@ -222,7 +221,7 @@ function mean(set1,set2,size) {
     return sum;
 }
 
-function get_selective_variance(arr1, arr2, size, sample) {
+export function get_selective_variance(arr1, arr2, size, sample) {
     let sample_average = sample;
 
     let result = 0.0;
@@ -232,11 +231,11 @@ function get_selective_variance(arr1, arr2, size, sample) {
     return result / size;
 }
 
-function get_sample_standard_deviation (arr1, arr2,size, sample){
+export function get_sample_standard_deviation (arr1, arr2,size, sample){
     return Math.sqrt(get_selective_variance(arr1,arr2,size, sample));
 }
 
-function get_theoretical_frequencies(VariesNear) {
+export function get_theoretical_frequencies(VariesNear) {
     let theoretical_frequencies = [];
     let hit_chance = [];
     for (let index = 0; index < VariesNear.get("sample").length; index++) {
@@ -256,11 +255,11 @@ function get_theoretical_frequencies(VariesNear) {
 }
 
 
-function laplase(x) {
+export function laplase(x) {
     return (1 / Math.sqrt(2 * Math.PI)) * method_parabol(func, 0.0, x, 500) 
 } 
 
-function method_parabol(func ,a, b, n) {
+export function method_parabol(func ,a, b, n) {
     let h=(b-a)/n;
     let k=0.0;
     let x=a + h
@@ -277,6 +276,6 @@ function method_parabol(func ,a, b, n) {
     return (h/3)*(func(a)+func(b)+k)
 }
 
-function func (z) {
+export function func (z) {
     return Math.E ** (-1 * z ** 2 / 2);
 }
