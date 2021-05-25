@@ -1,5 +1,10 @@
-export default (dataArray, className) => {
-    let str = "<table><tr><td>Start of interval</td><td>End of interval</td><td>Value of interval</td></tr>"
+export default (tableNames ,dataArray, className) => {
+    let str = "<table><tr>"
+
+    for(let i = 0; i < tableNames.length; i++) {
+        str +=  "<td>" + tableNames[i] + "</td>"
+    }
+    str += "</tr>"
 
     for (let i = 0; i < dataArray.length; i++) {
         str += "<tr>";

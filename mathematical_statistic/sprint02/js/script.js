@@ -1,5 +1,6 @@
 import getMatrix from "./getMatrix.js";
 import TabelSizeChange from "./TabelSizeChange.js"
+import task1 from "./task1.js"
 
 const variant_7_base = [
     [3.45, 3.55, 10],
@@ -81,14 +82,12 @@ var task_3 = [
 
 TabelSizeChange("#amount", start_variant_7, variant_7_base, ".main_div .task1_container .MainTable", 'task1')
 
-TabelSizeChange("#amount2", task_2, task_2_base, ".main_div .task2_container .MainTable2", 'task2')
+//TabelSizeChange("#amount2", task_2, task_2_base, ".main_div .task2_container .MainTable2", 'task2')
 
-TabelSizeChange("#amount3", task_3, task_3_base, ".main_div .task3_container .MainTable3", 'task3')
+//TabelSizeChange("#amount3", task_3, task_3_base, ".main_div .task3_container .MainTable3", 'task3')
 
 
 document.querySelector("#Calculate").addEventListener('click', () => {
     start_variant_7 = getMatrix('task1')
-    console.log(start_variant_7)
-
-
+    task1(start_variant_7)
 })
