@@ -21,28 +21,28 @@ export default (arr) => {
 
     createHtml('task1_2', 'span1_2', 'Hypothesis:', 'task1_container', null, '')
 
-    let VariesNear = get_varies_near_from_arr(arr);
-    VariesNear.set("sample_average", mean(VariesNear.get("sample"), VariesNear.get("repeat"), VariesNear.get("size")));
-    VariesNear.set("standard_deviation", get_sample_standard_deviation(
-                                            VariesNear.get("sample"), 
-                                            VariesNear.get("repeat"), 
-                                            VariesNear.get("size"),
-                                            VariesNear.get("sample_average"))
+    let VN = get_varies_near_from_arr(arr);
+    VN.set("sample_average", mean(VN.get("sample"), VN.get("repeat"), VN.get("size")));
+    VN.set("standard_deviation", get_sample_standard_deviation(
+                                            VN.get("sample"), 
+                                            VN.get("repeat"), 
+                                            VN.get("size"),
+                                            VN.get("sample_average"))
                                         )
 
-    VariesNear.set("variance", get_selective_variance(
-        VariesNear.get("sample"), 
-        VariesNear.get("repeat"), 
-        VariesNear.get("size"),
-        VariesNear.get("sample_average"))
+    VN.set("variance", get_selective_variance(
+        VN.get("sample"), 
+        VN.get("repeat"), 
+        VN.get("size"),
+        VN.get("sample_average"))
         )
 
-    let temp = get_theoretical_frequencies(VariesNear);
-    VariesNear.set("theoretical_frequencies", temp[0]);
-    VariesNear.set("hit_chance", temp[1]);
-    VariesNear.set("interval_str", interval_to_str(VariesNear.get("array")));
+    let temp = get_theoretical_frequencies(VN);
+    VN.set("theoretical_frequencies", temp[0]);
+    VN.set("hit_chance", temp[1]);
+    VN.set("interval_str", interval_to_str(VN.get("array")));
     
-    let pirson = HOPirson(VariesNear)
+    let pirson = HOPirson(VN)
     let ChartArray = []
     for(let i = 0; i < pirson["table"].length; i++) {
         let temp = []
@@ -188,7 +188,7 @@ export function print_chart(x_arr, y_arr, id, label, class_name, parent, mode) {
 
 
 export function get_varies_near_from_arr(array) {
-    let VariesNear = new Map();
+    let VN = new Map();
 
     let first = [];
     let second = [];
@@ -204,12 +204,12 @@ export function get_varies_near_from_arr(array) {
         size += parseInt(array[i][2]);
         
     }
-    VariesNear.set("sample", first);
-    VariesNear.set("repeat", second);
-    VariesNear.set("size",  size);
-    VariesNear.set("array", array);
+    VN.set("sample", first);
+    VN.set("repeat", second);
+    VN.set("size",  size);
+    VN.set("array", array);
 
-    return VariesNear;
+    return VN;
 }
 
 export function mean(set1,set2,size) {
@@ -235,16 +235,16 @@ export function get_sample_standard_deviation (arr1, arr2,size, sample){
     return Math.sqrt(get_selective_variance(arr1,arr2,size, sample));
 }
 
-export function get_theoretical_frequencies(VariesNear) {
+export function get_theoretical_frequencies(VN) {
     let theoretical_frequencies = [];
     let hit_chance = [];
-    for (let index = 0; index < VariesNear.get("sample").length; index++) {
-        let x0 = VariesNear.get("array")[index][0];
-        let x1 = VariesNear.get("array")[index][1];
-        let n = VariesNear.get("size");
+    for (let index = 0; index < VN.get("sample").length; index++) {
+        let x0 = VN.get("array")[index][0];
+        let x1 = VN.get("array")[index][1];
+        let n = VN.get("size");
 
-        let z0 = (x0 - VariesNear.get("sample_average")) / VariesNear.get("standard_deviation");
-        let z1 = (x1 - VariesNear.get("sample_average")) / VariesNear.get("standard_deviation");
+        let z0 = (x0 - VN.get("sample_average")) / VN.get("standard_deviation");
+        let z1 = (x1 - VN.get("sample_average")) / VN.get("standard_deviation");
         let F0 = laplase(z0);
         let F1 = laplase(z1);
         hit_chance.push((F1 - F0).toFixed(5));

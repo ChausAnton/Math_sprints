@@ -2,24 +2,24 @@ import createHtml from "./createHtml.js"
 import {get_selective_variance, mean, get_varies_near_from_arr} from "./task1.js"
 import PointFisher from "./PointFisher.js"
 export default (arr1, arr2) => {
-    let VariesNear1 = get_varies_near_from_arr(arr1)
-    let VariesNear2 = get_varies_near_from_arr(arr2)
-    VariesNear1.set("sample_average", mean(VariesNear1.get("sample"), VariesNear1.get("repeat"), VariesNear1.get("size")));
-    VariesNear2.set("sample_average", mean(VariesNear2.get("sample"), VariesNear2.get("repeat"), VariesNear2.get("size")));
+    let VN1 = get_varies_near_from_arr(arr1)
+    let VN2 = get_varies_near_from_arr(arr2)
+    VN1.set("sample_average", mean(VN1.get("sample"), VN1.get("repeat"), VN1.get("size")));
+    VN2.set("sample_average", mean(VN2.get("sample"), VN2.get("repeat"), VN2.get("size")));
 
-    VariesNear1.set("variance", get_selective_variance(
-        VariesNear1.get("sample"), 
-        VariesNear1.get("repeat"), 
-        VariesNear1.get("size"),
-        VariesNear1.get("sample_average"))
+    VN1.set("variance", get_selective_variance(
+        VN1.get("sample"), 
+        VN1.get("repeat"), 
+        VN1.get("size"),
+        VN1.get("sample_average"))
         )
-    VariesNear2.set("variance", get_selective_variance(
-        VariesNear2.get("sample"), 
-        VariesNear2.get("repeat"), 
-        VariesNear2.get("size"),
-        VariesNear2.get("sample_average"))
+    VN2.set("variance", get_selective_variance(
+        VN2.get("sample"), 
+        VN2.get("repeat"), 
+        VN2.get("size"),
+        VN2.get("sample_average"))
         )
-    let fisher = Fisher(VariesNear1, VariesNear2)
+    let fisher = Fisher(VN1, VN2)
     
     createHtml('task2_1', 'span2_1', 'Hypothesis:', 'task2_container', null, '')
 
