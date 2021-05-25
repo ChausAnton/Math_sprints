@@ -1,0 +1,25 @@
+.main_div {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.task1_container, .task2_container, .task3_container {
+    width: 100%;
+    min-height: 200px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.bloks {
+    margin-top: 10px;
+}
+
+.matrix_size, .matrix_size_2, .matrix_size_3 {
+    padding: 15px;
+}
+
+.calculate {
+    margin: 10px;
+}
+
+
