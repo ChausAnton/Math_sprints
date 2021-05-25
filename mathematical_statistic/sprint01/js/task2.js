@@ -2,7 +2,7 @@ export default (varies_near) => {
     destroy_charts();
     for(let i = 0; i < varies_near.length; i++) {
         let first_class = ".chart_" + String.fromCharCode(i + 97)
-        print_chart(varies_near[i][0],varies_near[i][1], "chart" + i,"Polygon of transmission frequencies", "result_chart", first_class + " .Polygon", "id",1);
+        print_chart(varies_near[i][0],varies_near[i][1], "chart" + i,"Графік варіаційних рядів", "result_chart", first_class + " .Polygon", "id",1);
 
         let h = Math.abs(varies_near[i][0][0] - varies_near[i][0][varies_near[i][0].length-1]);
         let h_arr = new Array(varies_near[i][0].length);
@@ -13,10 +13,10 @@ export default (varies_near) => {
         for (let z = 0; z < varies_near[i][1].length; z++) {
            xh_arr[z] = varies_near[i][1][z] / h;
         }
-        print_chart(xh_arr, h_arr, "chart_" + i,"Histogram of frequencies", "result_chart", first_class + " .Histogram", "id",2);
+        print_chart(xh_arr, h_arr, "chart_" + i,"Графік емпіричної функції розподілу", "result_chart", first_class + " .Histogram", "id",2);
         
     
-        print_chart(varies_near[i][0], varies_near[i][4], "chart3" + i,"Histogram of frequencies", "result_chart", first_class + " .Empirical", "id",2); 
+        print_chart(varies_near[i][0], varies_near[i][4], "chart3" + i,"Графік емпіричної функції розподілу", "result_chart", first_class + " .Empirical", "id",2); 
         
     }
 }

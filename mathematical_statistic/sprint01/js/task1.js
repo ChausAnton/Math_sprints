@@ -11,7 +11,7 @@ export default (samples) => {
         const sampleSpan = document.createElement('span')
         sampleSpan.classList.add('text_sample_name')
         sampleSpan.classList.add('text')
-        sampleSpan.innerHTML = "Sample " + String.fromCharCode(i + 97).toUpperCase() + ":"
+        sampleSpan.innerHTML = "Вибірка " + String.fromCharCode(i + 97).toUpperCase() + ":"
 
         const sampleDiv = document.createElement('div')
         sampleDiv.classList.add('sort_' + String.fromCharCode(i + 97))
@@ -28,7 +28,7 @@ export default (samples) => {
         const RangeSpan = document.createElement('span')
         RangeSpan.classList.add('RangeSpan')
         RangeSpan.classList.add('text')
-        RangeSpan.innerHTML = "Range: [" + samples[i][0] + ' , ' + samples[i][samples[i].length - 1] + "]"
+        RangeSpan.innerHTML = "Розмах: [" + samples[i][0] + ' , ' + samples[i][samples[i].length - 1] + "]"
 
 
         let clear_sample = []
@@ -97,19 +97,19 @@ function print_varies_near(VariesNear) {
     let str = "<table>" +
         "<tr>" +
         "<td>" +
-        "Sample" +
+        "Вибірка" +
         "</td>" +
         "<td>" +
-        "Frequency" +
+        "Частота" +
         "</td>" +
         "<td>" +
-        "Accumulated Frequencies" +
+        "Накопичувальні частоти" +
         "</td>" +
         "<td>" +
-        "Relative Frequencies" +
+        "Відносні частоти" +
         "</td>" +
         "<td>" +
-        "Comulative-Relative Frequencies" +
+        "Накопичувальні відносні частоти" +
         "</td>" +
         "</tr>";
 

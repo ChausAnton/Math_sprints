@@ -9,7 +9,7 @@ export default (varies_near, samples) => {
         const sampleSpan = document.createElement('span')
         sampleSpan.classList.add('text_sample_name')
         sampleSpan.classList.add('text')
-        sampleSpan.innerHTML = "Sample " + String.fromCharCode(i + 97).toUpperCase() + ":"
+        sampleSpan.innerHTML = "Вибірка " + String.fromCharCode(i + 97).toUpperCase() + ":"
 
         const MeanDiv = document.createElement('div')
         MeanDiv.classList.add('Mean')
@@ -19,7 +19,7 @@ export default (varies_near, samples) => {
         span1.classList.add('text')
         span1.classList.add('Mean_text')
         
-        span1.innerHTML = "Mean: " + Mean(varies_near, samples, i)
+        span1.innerHTML = "Вибіркова середня: " + Mean(varies_near, samples, i)
         
         const MedianDiv = document.createElement('div')
         MedianDiv.classList.add('Median')
@@ -29,7 +29,7 @@ export default (varies_near, samples) => {
         span2.classList.add('text')
         span2.classList.add('Median_text')
 
-        span2.innerHTML = "Median: " + Median(varies_near, i)
+        span2.innerHTML = "Медіана: " + Median(varies_near, i)
 
         const ModeDiv = document.createElement('div')
         ModeDiv.classList.add('Mode')
@@ -39,7 +39,7 @@ export default (varies_near, samples) => {
         span3.classList.add('text')
         span3.classList.add('Mode_text')
 
-        span3.innerHTML = "Mode: " + Mode(varies_near, i)
+        span3.innerHTML = "Мода: " + Mode(varies_near, i)
 
         const VarianceDiv = document.createElement('div')
         VarianceDiv.classList.add('Variance')
@@ -49,7 +49,7 @@ export default (varies_near, samples) => {
         span4.classList.add('text')
         span4.classList.add('Variance_text')
 
-        span4.innerHTML = "Sample Standart Variance: " + Variance(varies_near, samples, i)
+        span4.innerHTML = "Вибіркова середня: " + Variance(varies_near, samples, i)
 
         const DeviationDiv = document.createElement('div')
         DeviationDiv.classList.add('Deviation')
@@ -59,7 +59,7 @@ export default (varies_near, samples) => {
         span5.classList.add('text')
         span5.classList.add('Variance_text')
 
-        span5.innerHTML = "Sample Standart Deviation: " + Deviation(varies_near, samples, i)
+        span5.innerHTML = "Вибіркове середне квадратичне відхилення: " + Deviation(varies_near, samples, i)
 
         const variationDiv = document.createElement('div')
         variationDiv.classList.add('variation')
@@ -69,7 +69,7 @@ export default (varies_near, samples) => {
         span6.classList.add('text')
         span6.classList.add('Variance_text')
 
-        span6.innerHTML = "Coefficient of variation: " + variation(varies_near, samples, i)
+        span6.innerHTML = "Коефіціент варіацій: " + variation(varies_near, samples, i)
 
         const Moment3Div = document.createElement('div')
         Moment3Div.classList.add('Moment3')
@@ -79,7 +79,7 @@ export default (varies_near, samples) => {
         span7.classList.add('text')
         span7.classList.add('Moment3_text')
 
-        span7.innerHTML = "Central Moment 3: " + Moment(varies_near, samples, 3, i)
+        span7.innerHTML = "Централінй момент 3: " + Moment(varies_near, samples, 3, i)
 
         const Moment4Div = document.createElement('div')
         Moment4Div.classList.add('Moment4')
@@ -89,7 +89,7 @@ export default (varies_near, samples) => {
         span8.classList.add('text')
         span8.classList.add('Moment4_text')
 
-        span8.innerHTML = "Central Moment 4: " + Moment(varies_near, samples, 4, i)
+        span8.innerHTML = "Централінй момент 4: " + Moment(varies_near, samples, 4, i)
 
         const AsymmetryDiv = document.createElement('div')
         AsymmetryDiv.classList.add('Asymmetry')
@@ -99,7 +99,7 @@ export default (varies_near, samples) => {
         span9.classList.add('text')
         span9.classList.add('Asymmetry_text')
 
-        span9.innerHTML = "Asymmetry: " + Asymmetry(varies_near, samples, i, 3)
+        span9.innerHTML = "Асиметрія: " + Asymmetry(varies_near, samples, i, 3)
 
         const ExcessDiv = document.createElement('div')
         ExcessDiv.classList.add('Excess')
@@ -109,7 +109,7 @@ export default (varies_near, samples) => {
         span10.classList.add('text')
         span10.classList.add('Excess_text')
 
-        span10.innerHTML = "Excess: " + (Asymmetry(varies_near, samples, i, 4) - 3)
+        span10.innerHTML = "Ексцес: " + (Asymmetry(varies_near, samples, i, 4) - 3)
 
         const CorrectedVarianceDiv = document.createElement('div')
         CorrectedVarianceDiv.classList.add('CorrectedVariance')
@@ -119,7 +119,7 @@ export default (varies_near, samples) => {
         span11.classList.add('text')
         span11.classList.add('CorrectedVariance_text')
 
-        span11.innerHTML = "Sample Corrected Variance: " + CorrectedVariance(varies_near, samples, i)
+        span11.innerHTML = "Виправлена дисперсія: " + CorrectedVariance(varies_near, samples, i)
 
         const CorrectedDeviationDiv = document.createElement('div')
         CorrectedDeviationDiv.classList.add('CorrectedDeviation')
@@ -129,7 +129,7 @@ export default (varies_near, samples) => {
         span12.classList.add('text')
         span12.classList.add('CorrectedDeviation_text')
 
-        span12.innerHTML = "Sample Corrected Deviation: " + CorrectedDeviation(varies_near, samples, i)
+        span12.innerHTML = "Виправлена середне квадратичне відхилення: " + CorrectedDeviation(varies_near, samples, i)
 
         div.appendChild(sampleSpan)
         MeanDiv.appendChild(span1)

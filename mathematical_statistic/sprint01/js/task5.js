@@ -10,7 +10,7 @@ export default (varies_near, samples) => {
         const sampleSpan = document.createElement('span')
         sampleSpan.classList.add('text_sample_name')
         sampleSpan.classList.add('text')
-        sampleSpan.innerHTML = "Sample " + String.fromCharCode(i + 97).toUpperCase() + ":"
+        sampleSpan.innerHTML = "Вибірка " + String.fromCharCode(i + 97).toUpperCase() + ":"
         div.appendChild(sampleSpan)
 
         let expectedValue = get_interval_expected_value(varies_near, samples, i)
@@ -23,7 +23,7 @@ export default (varies_near, samples) => {
         span1.classList.add('text')
         span1.classList.add('CentralInterval_text')
 
-        span1.innerHTML = "Expected Value (Central interval): " + expectedValue[2]
+        span1.innerHTML = "Очікуване значення (Центральний інтервал): " + expectedValue[2]
 
         const LowerIntervalDiv = document.createElement('div')
         LowerIntervalDiv.classList.add('LowerInterval')
@@ -33,7 +33,7 @@ export default (varies_near, samples) => {
         span2.classList.add('text')
         span2.classList.add('LowerInterval_text')
 
-        span2.innerHTML = "Expected Value (Lower interval): " + expectedValue[1]
+        span2.innerHTML = "Очікуване значення (Нижній інтервал): " + expectedValue[1]
 
         const UpperIntervalDiv = document.createElement('div')
         UpperIntervalDiv.classList.add('UpperInterval')
@@ -43,7 +43,7 @@ export default (varies_near, samples) => {
         span3.classList.add('text')
         span3.classList.add('UpperInterval_text')
 
-        span3.innerHTML = "Expected Value (Upper interval): " + expectedValue[0]
+        span3.innerHTML = "Очікуване значення (Верхній інтервал): " + expectedValue[0]
 
         /////////////////////////////////////
         let standardDeviation = get_standard_deviation(varies_near, samples, i)
@@ -56,7 +56,7 @@ export default (varies_near, samples) => {
         span4.classList.add('text')
         span4.classList.add('DeviationCentral_text')
 
-        span4.innerHTML = "Deviation Value (Central interval): " + standardDeviation[2]
+        span4.innerHTML = "Стандартне відхилення (Центральний інтервал): " + standardDeviation[2]
 
         const DeviationLowerDiv = document.createElement('div')
         DeviationLowerDiv.classList.add('DeviationLower')
@@ -66,7 +66,7 @@ export default (varies_near, samples) => {
         span5.classList.add('text')
         span5.classList.add('DeviationLower_text')
 
-        span5.innerHTML = "Deviation Value (Lower interval): " + standardDeviation[1]
+        span5.innerHTML = "Стандартне відхилення (Нижній інтервал): " + standardDeviation[1]
 
         const DeviationUpperDiv = document.createElement('div')
         DeviationUpperDiv.classList.add('DeviationUpper')
@@ -76,9 +76,8 @@ export default (varies_near, samples) => {
         span6.classList.add('text')
         span6.classList.add('DeviationUpper_text')
 
-        span6.innerHTML = "Deviation Value (Upper interval): " + standardDeviation[0]
+        span6.innerHTML = "Стандартне відхилення (Верхній інтервал): " + standardDeviation[0]
 
-        
         ///////////////////////////////////
 
         CentralIntervalDiv.appendChild(span1)

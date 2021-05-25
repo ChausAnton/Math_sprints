@@ -14,7 +14,7 @@ document.querySelector("#amount").addEventListener('change', () => {
         container.classList.add('sample')
 
         const lable = document.createElement('lable')
-        lable.innerHTML = 'Sample ' + String.fromCharCode(i + 97).toUpperCase() + ': '
+        lable.innerHTML = 'Вибірка ' + String.fromCharCode(i + 97).toUpperCase() + ': '
         lable.setAttribute('for', String.fromCharCode(i + 97))
 
         const input = document.createElement('input')
@@ -65,12 +65,12 @@ function containers_for_task2(samples) {
         const sampleSpan = document.createElement('span')
         sampleSpan.classList.add('text_sample_name')
         sampleSpan.classList.add('text')
-        sampleSpan.innerHTML = "Sample " + String.fromCharCode(i + 97).toUpperCase() + ":"
+        sampleSpan.innerHTML = "Вибірка " + String.fromCharCode(i + 97).toUpperCase() + ":"
 
         const span1 = document.createElement('span')
         span1.classList.add('text')
         span1.classList.add('Polygon_text')
-        span1.innerHTML = "Polygon chart:"
+        span1.innerHTML = "Полігон:"
 
         const div1 = document.createElement('div')
         div1.classList.add('Polygon')
@@ -79,7 +79,7 @@ function containers_for_task2(samples) {
         const span2 = document.createElement('span')
         span2.classList.add('text')
         span2.classList.add('Histogram_text')
-        span2.innerHTML = "Histogram chart:"
+        span2.innerHTML = "Гістограма:"
 
         const div2 = document.createElement('div')
         div2.classList.add('Histogram')
@@ -88,7 +88,7 @@ function containers_for_task2(samples) {
         const span3 = document.createElement('span')
         span3.classList.add('text')
         span3.classList.add('Empirical_text')
-        span3.innerHTML = "Empirical distribution function chart:"
+        span3.innerHTML = "Графік емпіричної функції розроділу:"
 
         const div3 = document.createElement('div')
         div3.classList.add('Empirical')
