@@ -7,7 +7,7 @@ export default (TriggerName, array, baseArray, path, className) => {
             new_arr.push(baseArray[i])
         }
         array = new_arr
-        document.querySelector(path).innerHTML = TableInStr(['Start of interval', 'End of interval', 'Value of interval'], array, className)
+        document.querySelector(path).innerHTML = TableInStr(['Початок інтервалу', 'Кінець інтервалу', 'Число спостережень'], array, className)
     })
-    document.querySelector(path).innerHTML = TableInStr(['Start of interval', 'End of interval', 'Value of interval'], array, className)
+    document.querySelector(path).innerHTML = TableInStr(['Початок інтервалу', 'Кінець інтервалу', 'Число спостережень'], array, className)
 }

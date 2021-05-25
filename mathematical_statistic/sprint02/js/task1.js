@@ -13,13 +13,13 @@ export default (arr) => {
         temp.push(hit[i])
         array.push(temp)
     }
-    let table = TableInStr(['Interval', 'Value of interval', 'Hit'], array, 'hit_table')
+    let table = TableInStr(['Інтервал', 'Число спостережень', 'Частоти попадання'], array, 'hit_table')
 
-    createHtml('task1_1', 'span1_1', 'Interval statistical series:', 'task1_container', table, 'table1_1')
+    createHtml('task1_1', 'span1_1', 'Інтервальний статистичний ряд:', 'task1_container', table, 'table1_1')
 
-    print_chart(hit, interval, "chart1" , "Interval statistical series", "result_chart", "task1_container", "class");
+    print_chart(hit, interval, "chart1" , "Інтервальний статистичний ряд:", "result_chart", "task1_container", "class");
 
-    createHtml('task1_2', 'span1_2', 'Hypothesis:', 'task1_container', null, '')
+    createHtml('task1_2', 'span1_2', 'Гіпотиза про визляд закону розподілу на основі критерія Пірсона:', 'task1_container', null, '')
 
     let VN = get_varies_near_from_arr(arr);
     VN.set("sample_average", mean(VN.get("sample"), VN.get("repeat"), VN.get("size")));
@@ -55,15 +55,15 @@ export default (arr) => {
     createHtml('task1_2_1', 'span1_3', 'H0: ' + pirson['HO'], 'task1_2', NaN, '')
 
 
-    table = TableInStr(['Xi', 'Xi+1', 'ni', 'x1', 'x2', 'F(x1)', 'F(x2)', 'pi', 'ni', 'Ki'], ChartArray, 'Iteration_table')
+    table = TableInStr(['Xi', 'Xi+1', 'ni', 'x1', 'x2', 'F(x1)', 'F(x2)', 'pi', 'ni', 'Ki'], ChartArray, 'Ітераційна таблиця')
 
-    createHtml('task1_2_2', 'span1_4', 'Iteration table:', 'task1_2', table, 'table1_2')
+    createHtml('task1_2_2', 'span1_4', 'Ітераційна таблиця:', 'task1_2', table, 'table1_2')
 
-    createHtml('task1_2_1', 'span1_3', 'Power of freedom: ' + pirson['result']['FreedomPower'], 'task1_2', NaN, '')
+    createHtml('task1_2_1', 'span1_3', 'Степінь свободи: ' + pirson['result']['FreedomPower'], 'task1_2', NaN, '')
 
-    createHtml('task1_2_1', 'span1_3', 'Observed value P: ' + pirson['result']['observedValue'], 'task1_2', NaN, '')
+    createHtml('task1_2_1', 'span1_3', 'Спостережене значення: ' + pirson['result']['observedValue'], 'task1_2', NaN, '')
 
-    createHtml('task1_2_1', 'span1_3', 'Critical point p: ' + pirson['result']['criticalPoint'], 'task1_2', NaN, '')
+    createHtml('task1_2_1', 'span1_3', 'Критична точка: ' + pirson['result']['criticalPoint'], 'task1_2', NaN, '')
 }
 
 function HOPirson(varies) {

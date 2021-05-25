@@ -21,21 +21,21 @@ export default (arr1, arr2) => {
         )
     let fisher = Fisher(VN1, VN2)
     
-    createHtml('task2_1', 'span2_1', 'Hypothesis:', 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Гіпотеза про рівність дисперсій норвально розподілених генеральних скупностей на основі критерія Фішера:', 'task2_container', null, '')
 
     createHtml('task2_1', 'span2_1', 'H0: ' + fisher['HO'], 'task2_container', null, '')
 
-    createHtml('task2_1', 'span2_1', 'Power of freedom 1: ' + fisher['result']['FreedomPowe1'], 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Степінь свободи 1: ' + fisher['result']['FreedomPowe1'], 'task2_container', null, '')
 
-    createHtml('task2_1', 'span2_1', 'Power of freedom 2: ' + fisher['result']['FreedomPowe2'], 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Степінь свободи2: ' + fisher['result']['FreedomPowe2'], 'task2_container', null, '')
 
-    createHtml('task2_1', 'span2_1', 'Variance 1: ' + fisher['result']['variance1Value'], 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Корегована вибіркова дисперсія 1: ' + fisher['result']['variance1Value'], 'task2_container', null, '')
 
-    createHtml('task2_1', 'span2_1', 'Variance 2: ' + fisher['result']['variance2Value'], 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Корегована вибіркова дисперсія 2: ' + fisher['result']['variance2Value'], 'task2_container', null, '')
 
-    createHtml('task2_1', 'span2_1', 'Observed value F: ' + fisher['result']['observedValue'], 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Спостережене значення F: ' + fisher['result']['observedValue'], 'task2_container', null, '')
 
-    createHtml('task2_1', 'span2_1', 'Critical point f: ' + fisher['result']['PointValue'], 'task2_container', null, '')
+    createHtml('task2_1', 'span2_1', 'Критична точка f: ' + fisher['result']['PointValue'], 'task2_container', null, '')
 
 }
 

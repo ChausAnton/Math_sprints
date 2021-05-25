@@ -24,19 +24,19 @@ export default (arr1, arr2) => {
 
     let middle = Middle(VariesNear1, VariesNear2)
     
-    createHtml('task3_1', 'span2_1', 'Hypothesis:', 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'Гіпотеза про рівність середніх:', 'task3_container', null, '')
 
-    createHtml('task3_1', 'span2_1', 'H0 (T-test): ' + middle['HO']['T'], 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'H0 (T-тест): ' + middle['HO']['T'], 'task3_container', null, '')
 
-    createHtml('task3_1', 'span2_1', 'H0 (Z-test): ' + middle['HO']['Z'], 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'H0 (Z-тест): ' + middle['HO']['Z'], 'task3_container', null, '')
 
-    createHtml('task3_1', 'span2_1', 'Observed value |T|: ' + middle['result']['ValueT'], 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'Спостережене значення |T|: ' + middle['result']['ValueT'], 'task3_container', null, '')
 
-    createHtml('task3_1', 'span2_1', 'Observed value |Z|: ' + middle['result']['ValueZ'], 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'Спостережене значення |Z|: ' + middle['result']['ValueZ'], 'task3_container', null, '')
 
-    createHtml('task3_1', 'span2_1', 'Critical point T: ' + middle['result']['criticalPointT'], 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'Критична точка T: ' + middle['result']['criticalPointT'], 'task3_container', null, '')
 
-    createHtml('task3_1', 'span2_1', 'Critical point Z: ' + middle['result']['criticalPoinZ'], 'task3_container', null, '')
+    createHtml('task3_1', 'span2_1', 'Критична точка Z: ' + middle['result']['criticalPoinZ'], 'task3_container', null, '')
 
 }
 
