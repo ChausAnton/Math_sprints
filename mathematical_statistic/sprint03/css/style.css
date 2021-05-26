@@ -1,0 +1,60 @@
+.main_div {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.task1_container, .task2_container, .task3_container {
+    width: 100%;
+    min-height: 200px;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.bloks {
+    margin-top: 10px;
+}
+
+.matrix_size {
+    margin: 15px;
+}
+
+.calculate {
+    margin: 10px;
+}
+
+
+#significance {
+    margin: 10px;
+    width: 75px;
+}
+
+
+.MainTable, .task1Table {
+    margin: 15px;
+}
+
+
+textarea {
+    resize: none;
+    display: block;
+    border: none;
+    text-align: center;
+    padding: 15px;
+    outline: none;
+}
+
+td {
+    text-align: center; 
+    vertical-align: middle;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.task1_1 {
+    margin-top: 30px;
+}
+
+.span1 {
+    font-size: 26px;
+    margin: 15px;
+}
