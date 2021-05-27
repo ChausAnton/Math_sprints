@@ -52,7 +52,7 @@ function Fisher(varies1, varies2) {
         FreedomPowe2 = varies2.get("repeat").length - 1
     }
     else {
-        observedValue = varies2.get("variance") / varies2.get("variance")
+        observedValue = varies2.get("variance") / varies1.get("variance")
         FreedomPowe1 = varies2.get("repeat").length - 1
         FreedomPowe2 = varies1.get("repeat").length - 1
     }
